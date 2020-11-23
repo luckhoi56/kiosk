@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test-button',
   template:`
     <div>
-    <input type="checkbox" (click)="toggleShowData()">Toggle Data
+      <input type="checkbox" (click)="toggleShowData()">Toggle Data
     </div>
     
     <div *ngIf="showItem">
@@ -28,11 +28,17 @@ import { Component, OnInit } from '@angular/core';
         <input type="radio" name={{option.name}} value={{option.value}}>{{option.text}}
         </div>
         <input type="submit" value="Submit">
-
     </form>
+    
+    <input type="text" placeholder="write something..." [(ngModel)]="modelString">
+    <input type="button" (click)="printModel()" value="Print Model">
+    
+
   `
 })
 export class TestButtonComponent implements OnInit {
+  public myPath:string = "https://placekitten.com/200/300"
+  public modelString:string=""
   showItem:boolean=false
   /*
   people: any=[
@@ -58,6 +64,16 @@ options:any=[
     this.showItem = !this.showItem
     console.log("toggle in test button component")
   }
+
+  printModel():void{
+    console.log("Model String: "+ this.modelString)
+  }
+  /*
+  toggleDogPic():void{
+    if(this.)
+  }
+
+  */
 }
 
 

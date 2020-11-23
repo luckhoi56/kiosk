@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sea.component.css']
 })
 export class SeaComponent implements OnInit {
+  
   showItem:boolean = false
   people: any=[
     {name:"Bob",birthMonth:"Jan",City:"Los Angeles",Street:"Levering",Planet:"Earth"},

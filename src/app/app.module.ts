@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { SeaComponent } from './search/sea/sea.component';
 import { TestButtonComponent } from './components/test-button/test-button.component';
+import { FormsModule } from '@angular/forms';
+import { KioskComponent } from './kiosk/kiosk.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +15,14 @@ import { TestButtonComponent } from './components/test-button/test-button.compon
 
     SeaComponent,
 
-    TestButtonComponent
+    TestButtonComponent,
+
+    KioskComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
