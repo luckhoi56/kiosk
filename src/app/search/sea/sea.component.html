@@ -1,11 +1,9 @@
 <p *ngIf="showItem">search works!</p>
 <button type ="button" (click)="toggleShowItem()">Toggle</button>
 
+<div *ngIf="showItem">
 <div *ngFor="let person of people">
-    {{person.name}} was born of {{person.month}}
+    {{person.name}} {{person.birthMonth}} {{person.City}} {{person.Street}} {{person.Planet}}
+</div>
 </div>
 
-
-<div [ngSwitch] ="people[0].name">
-    <p></p>
-</div>

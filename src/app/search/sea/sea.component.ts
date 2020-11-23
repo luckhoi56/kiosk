@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeaComponent implements OnInit {
   showItem:boolean = false
-  people: any =[
-    {name:"Bob", birthMonth: "Jan"}
+  people: any=[
+    {name:"Bob",birthMonth:"Jan",City:"Los Angeles",Street:"Levering",Planet:"Earth"},
+    {name:"Jane",birthMonth:"Feb",City:"Westwood",Street:"Kelton",Planet:"Mar"}
   ]
   constructor() { }
 
