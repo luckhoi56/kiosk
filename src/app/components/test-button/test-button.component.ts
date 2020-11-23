@@ -13,14 +13,23 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-test-button',
   template:`
-    <button type="button" (click)="toggleShowData()">Toggle Data
-
-    </button>
+    <div>
+    <input type="checkbox" (click)="toggleShowData()">Toggle Data
+    </div>
+    
     <div *ngIf="showItem">
-    <div *ngFor="let person of people">
-          {{person.name}}
+        <div *ngFor="let person of people">
+          {{person.name}} {{person.birthMonth}} {{person.City}} {{person.Street}} {{person.Planet}}
         </div>
     </div>
+
+    <form>
+        <div *ngFor="let option of options">
+        <input type="radio" name={{option.name}} value={{option.value}}>{{option.text}}
+        </div>
+        <input type="submit" value="Submit">
+
+    </form>
   `
 })
 export class TestButtonComponent implements OnInit {
@@ -35,6 +44,11 @@ export class TestButtonComponent implements OnInit {
   {name:"Bob",birthMonth:"Jan",City:"Los Angeles",Street:"Levering",Planet:"Earth"},
   {name:"Jane",birthMonth:"Feb",City:"Westwood",Street:"Kelton",Planet:"Mar"}
 ]
+
+options:any=[
+  {name:"choice",value:"yes",text:"Yes"},
+  {name:"choice",value:"no",text:"No"}
+]
   constructor() { }
 
   ngOnInit(): void {
@@ -45,3 +59,5 @@ export class TestButtonComponent implements OnInit {
     console.log("toggle in test button component")
   }
 }
+
+
