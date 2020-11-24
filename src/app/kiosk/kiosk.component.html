@@ -5,7 +5,8 @@
         </label><br>
       <input name=a{{index}} [(ngModel)]="options[index].value" type="text" [id]="option.name" [value]="option.value">
     </div>
-    <input type="radio" id="newsfeed" name="news" value="newfeed">
+    <input type="checkbox" [checked]="check" id="newsfeed" name="news" value="newfeed" (click)="m_check()">
+    
     <label for="newsfeed">Newsfeed?</label><br>
     <input type="submit" value="Confirm" (click)="m_confirm()"><br><br>
     <input type="submit" value="Unconfirm" (click)="m_unconfirm()"><br><br>
@@ -16,5 +17,11 @@
 <div *ngIf="confirm_state">
     <div *ngFor="let option of options;let index = index">
         {{option.text}} {{option.value}}
+    </div>
+    <div>
+        {{check}} news Feed
+    </div>
+    <div>
+
     </div>
 </div>

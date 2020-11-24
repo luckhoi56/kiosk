@@ -8,6 +8,9 @@ import { SeaComponent } from './search/sea/sea.component';
 import { TestButtonComponent } from './components/test-button/test-button.component';
 import { FormsModule } from '@angular/forms';
 import { KioskComponent } from './kiosk/kiosk.component';
+import { TestEventComponent } from './test-event/test-event.component';
+import { HelloComponent } from './hello/hello.component';
+import { EventChildComponent } from './event-child/event-child.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,13 @@ import { KioskComponent } from './kiosk/kiosk.component';
 
     TestButtonComponent,
 
-    KioskComponent
+    KioskComponent,
+
+    TestEventComponent,
+
+    HelloComponent,
+
+    EventChildComponent
   ],
   imports: [
     BrowserModule,

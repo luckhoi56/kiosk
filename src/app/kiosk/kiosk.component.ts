@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KioskComponent  {
   public confirm_state:boolean = false
+  public check:boolean = false
   constructor() { }
   ngOnInit(): void {
   }
@@ -26,6 +27,10 @@ export class KioskComponent  {
  m_submit():void{
    for(let option of this.options)
     option.value=""
+ }
+ m_check():void{
+   this.check=!this.check
+   console.log(this.check)
  }
 
 }
