@@ -9,6 +9,33 @@ export class TestEventComponent implements OnInit {
   public m_city_from:string = ""
   public m_city_to:any
   public show = false
+  public m_images:any=[
+    {
+      "name":"Los Angeles",
+      "src": "https://images.unsplash.com/photo-1425321395722-b1dd54a97cf3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+      
+    },
+    {
+      "name":"St. Louis",
+      "src": "https://images.unsplash.com/photo-1605842581240-a0e2527d200b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+    },
+    {
+      "name":"Houston",
+      "src": "https://images.unsplash.com/photo-1603538794058-7471d7648902?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+    },
+    {
+      "name":"Seattle",
+      "src": "https://images.unsplash.com/photo-1605960502123-1c4f3cfaec08?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+    },
+    {
+      "name":"New York",
+      "src": "https://images.unsplash.com/photo-1605699429575-9f016e477b48?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+    },
+    {
+      "name":"Tampa",
+      "src": "https://images.unsplash.com/photo-1603879493311-a977e9e5aa65?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+    },
+  ]
   public data = JSON.parse(`{
     "from": [
       {
@@ -30,7 +57,7 @@ export class TestEventComponent implements OnInit {
       {
         "name": "St. Louis",
         "to": [
-      { "name": "Seattle", "price": 199 },
+      { "name": "Seattle", "price": 199, "src":"https://images.unsplash.com/photo-1425321395722-b1dd54a97cf3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" },
           { "name": "Los Angeles", "price": 219 },
       { "name": "New York", "price": 215 },
       { "name": "Houston", "price": 201 },
@@ -85,4 +112,11 @@ export class TestEventComponent implements OnInit {
         this.m_city_to = city.to
     }
   }
+   getImage(cityName):string{
+    for(let i of this.m_images){
+      if(i.name==cityName)
+        return i.src
+    }
+  }
+ 
 }
