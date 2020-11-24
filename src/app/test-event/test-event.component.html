@@ -1,15 +1,23 @@
 <app-event-child></app-event-child>
+<h3>From:</h3>
 <form >
-    <div  *ngFor="let data of data.from,let index=index">
+    <div  *ngFor="let data of data.from">
         <input [name]="city" type="radio" [id]="data.name" [value]="data.name" (change)="onItemChange($event.target.id)">
         <label [for]="data.name">
             {{data.name}}
         </label>
     </div>
+<h3>To</h3>
     <div *ngIf="show">
-        <div *ngFor="let city of m_city_to">
-            {{city.name}} {{city.price}}
-        </div>
+        <form>
+            <div *ngFor="let city of m_city_to,let index = index">
+                <input [name]="subCity" type="radio" [id]=index [value]="city.name">
+                <label [for]=index>
+                    {{city.name}} {{city.price}} 
+                </label>
+            </div>
+        </form>
+        
     </div>
 </form>
 
