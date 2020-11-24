@@ -6,7 +6,7 @@ import {EventChildComponent} from '../event-child/event-child.component'
   styleUrls: ['./test-event.component.css']
 })
 export class TestEventComponent implements OnInit {
-  private data = JSON.parse(`{
+  public data = JSON.parse(`{
     "from": [
       {
         "name": "Seattle",
