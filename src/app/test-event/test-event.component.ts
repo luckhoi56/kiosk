@@ -6,6 +6,9 @@ import {EventChildComponent} from '../event-child/event-child.component'
   styleUrls: ['./test-event.component.css']
 })
 export class TestEventComponent implements OnInit {
+  public m_city_from:string = ""
+  public m_city_to:any
+  public show = false
   public data = JSON.parse(`{
     "from": [
       {
@@ -74,5 +77,12 @@ export class TestEventComponent implements OnInit {
   }
   onItemChange(value){
     console.log("Value is: ", value)
+    this.m_city_from = value
+    
+    this.show = true
+    for(let city of this.data.from){
+      if(city.name==value)
+        this.m_city_to = city.to
+    }
   }
 }
