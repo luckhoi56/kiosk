@@ -72,7 +72,7 @@ export class TestEventComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  buttonClicked(){
-
+  onItemChange(value){
+    console.log("Value is: ", value)
   }
 }

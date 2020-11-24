@@ -1,11 +1,10 @@
 <app-event-child></app-event-child>
 <form>
     <div *ngFor="let data of data.from,let index=index">
-        <input name="city" type="radio" [id]="data.name" [value]="data.name">
+        <input [name]="city" type="radio" [id]="data.name" [value]="data.name" (change)="onItemChange($event.target.id)">
         <label [for]="data.name">
             {{data.name}}
         </label>
-        
     </div>
 </form>
 
