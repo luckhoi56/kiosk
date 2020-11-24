@@ -2,25 +2,21 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-kiosk',
-  template:
-  `
-  <form>
-    <div *ngFor="let option of options">
-      <label for={{option.name}}>{{option.text}}</label><br>
-      <input type="text" id={{option.name}} >
-    </div>
-  </form>
-  `
+  templateUrl: './kiosk.component.html',
+  styleUrls: ['./kiosk.component.css']
 })
 export class KioskComponent  {
+  public fname:string=""
+  public lname:string=""
+  public bday:string=""
   constructor() { }
 
   ngOnInit(): void {
   }
-  options:any=[
-    {name:"fname",text:"Your full name"},
-    {name:"bday",text:"Birth Date"},
-    {name:"email",text:"Your Email"}
+  public options:any=[
+    {name:"fname",text:"Your full name",value:"1"},
+    {name:"bday",text:"Birth Date",value:"2"},
+    {name:"email",text:"Your Email",value:"3"}
   ]
  
 

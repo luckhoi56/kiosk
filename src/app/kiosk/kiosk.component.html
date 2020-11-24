@@ -1,1 +1,10 @@
-<p>kiosk works!</p>
+<form>
+    <div *ngFor="let option of options;let index = index">
+      <label [for]="option.name">
+          {{option.text}}
+        </label><br>
+      <input name=a{{index}} [(ngModel)]="options[index].value" type="text" [id]="option.name" [value]="option.value">
+    </div>
+    <input type="submit">
+  </form>
+
