@@ -5,6 +5,16 @@
         </label><br>
       <input name=a{{index}} [(ngModel)]="options[index].value" type="text" [id]="option.name" [value]="option.value">
     </div>
-    <input type="submit">
-  </form>
+    <input type="radio" id="newsfeed" name="news" value="newfeed">
+    <label for="newsfeed">Newsfeed?</label><br>
+    <input type="submit" value="Confirm" (click)="m_confirm()"><br><br>
+    <input type="submit" value="Unconfirm" (click)="m_unconfirm()"><br><br>
+    <input type="submit" value="Submit" (click)="m_submit()"><br><br>
+    
+</form>
 
+<div *ngIf="confirm_state">
+    <div *ngFor="let option of options;let index = index">
+        {{option.text}} {{option.value}}
+    </div>
+</div>

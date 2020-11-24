@@ -6,18 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kiosk.component.css']
 })
 export class KioskComponent  {
-  public fname:string=""
-  public lname:string=""
-  public bday:string=""
+  public confirm_state:boolean = false
   constructor() { }
-
   ngOnInit(): void {
   }
   public options:any=[
-    {name:"fname",text:"Your full name",value:"1"},
-    {name:"bday",text:"Birth Date",value:"2"},
-    {name:"email",text:"Your Email",value:"3"}
+    {name:"fname",text:"Your full name",value:""},
+    {name:"bday",text:"Birth Date",value:""},
+    {name:"email",text:"Your Email",value:""}
   ]
- 
+  
+ m_confirm():void{
+   this.confirm_state = true
+   console.log("in m_confirm")
+ }
+ m_unconfirm():void{
+   this.confirm_state = false
+ }
+ m_submit():void{
+   for(let option of this.options)
+    option.value=""
+ }
 
 }
