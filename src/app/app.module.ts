@@ -11,6 +11,7 @@ import { KioskComponent } from './kiosk/kiosk.component';
 import { TestEventComponent } from './test-event/test-event.component';
 import { HelloComponent } from './hello/hello.component';
 import { EventChildComponent } from './event-child/event-child.component';
+import { MServiceComponent } from './m-service/m-service.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,14 @@ import { EventChildComponent } from './event-child/event-child.component';
 
     HelloComponent,
 
-    EventChildComponent
+    EventChildComponent,
+
+    MServiceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule //need to use ngModel
   ],
   providers: [],
   bootstrap: [AppComponent]

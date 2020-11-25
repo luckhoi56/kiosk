@@ -141,6 +141,8 @@ export class TestEventComponent implements OnInit {
     console.log(cityName+"aha")
     this.m_images[cityName].checked = true
   }
-
+  reset():void{
+    
+  }
  
 }
