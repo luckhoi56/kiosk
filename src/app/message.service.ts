@@ -9,15 +9,18 @@ export class MessageService {
     "menu": [
       {
         "name": "Beef Noodle",
-        "quantity":"0"
+        "quantity":"0",
+        "price":"8"
       },
       {
         "name": "Spring Rolls",
-        "quantity":"0"
+        "quantity":"0",
+        "price":"4"
       },
       {
         "name": "Fried Rice",
-        "quantity":"0"
+        "quantity":"0",
+        "price":"9"
       }
 
     ] }
