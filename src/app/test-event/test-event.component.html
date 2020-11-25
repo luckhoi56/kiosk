@@ -9,13 +9,15 @@
     </div>
 <h3>To</h3>
     <div class="form-group" *ngIf="show">
-        <form>
+        <form >
             <div *ngFor="let city of m_city_to,let index = index">
-                <input [name]="subCity" type="radio" [id]=index [value]="city.name" >
+                
+                <input [name]="subCity" type="radio" [id]=index [value]="city.name" [checked]="m_images[city.name].checked">
                 <label [for]=index>
                     {{city.name}} {{city.price}} 
                 </label>
-                <img [src]="getImage(city.name)" >
+                <img [src]="m_images[city.name].src" >
+                
                 
             </div>
         </form>
