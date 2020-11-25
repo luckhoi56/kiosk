@@ -18,38 +18,38 @@ export class TestEventComponent implements OnInit {
         "name":"St. Louis",
         "src": "https://images.unsplash.com/photo-1605842581240-a0e2527d200b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
         "information":"this is 2",
-        checked:""
+        checked:false
     },
     "Los Angeles":{
         "name":"Los Angeles",
         "src": "https://images.unsplash.com/photo-1604601398489-8e191cb3a3b0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
         "information":"this is 1",
-        checked:""
+        checked:false
     },
     "Houston":{
         "name":"Houston",
         "src": "https://images.unsplash.com/photo-1603538794058-7471d7648902?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
         "information":"this is 3",
-        checked:""
+        checked:false
     },
 
     "Seattle":{
         "name":"Seattle",
         "src": "https://images.unsplash.com/photo-1605960502123-1c4f3cfaec08?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
         "information":"this is 4",
-        checked:""
+        checked:false
     },
     "Tampa":{
         "name":"Tampa",
         "src": "https://images.unsplash.com/photo-1603879493311-a977e9e5aa65?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
         "information":"this is 6",
-        checked:""
+        checked:false
     },
     "New York":{
         "name":"New York",
         "src": "https://images.unsplash.com/photo-1605699429575-9f016e477b48?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
         "information":"this is 5",
-        checked:""
+        checked:false
     }
 }
   public data = JSON.parse(`{
