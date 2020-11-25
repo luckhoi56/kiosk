@@ -12,6 +12,8 @@ import { TestEventComponent } from './test-event/test-event.component';
 import { HelloComponent } from './hello/hello.component';
 import { EventChildComponent } from './event-child/event-child.component';
 import { MServiceComponent } from './m-service/m-service.component';
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,11 @@ import { MServiceComponent } from './m-service/m-service.component';
 
     EventChildComponent,
 
-    MServiceComponent
+    MServiceComponent,
+
+    ShopComponent,
+
+    CartComponent
   ],
   imports: [
     BrowserModule,
