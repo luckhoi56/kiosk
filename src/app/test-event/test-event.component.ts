@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit,Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit,Output } from '@angular/core';
 import {EventChildComponent} from '../event-child/event-child.component'
 
 @Component({
@@ -134,5 +134,13 @@ export class TestEventComponent implements OnInit {
         return i.src
     }
   }
+  radioEnable(cityName):void{
+    for (const [key, value] of Object.entries(this.m_images)) {
+      this.m_images[key].checked = false
+    }
+    console.log(cityName+"aha")
+    this.m_images[cityName].checked = true
+  }
+
  
 }

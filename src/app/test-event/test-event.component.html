@@ -12,18 +12,18 @@
         <form >
             <div *ngFor="let city of m_city_to,let index = index">
                 
-                <input [name]="index" type="radio" [id]=index [value]="city.name" [checked]="m_images[city.name].checked">
+                <input [name]="index" type="radio" [id]=index [value]="city.name" [checked]="m_images[city.name].checked" (change)="radioEnable($event.target.value)">
                 <label [for]=index>
                     {{city.name}} {{city.price}} 
                 </label>
                 <img [src]="m_images[city.name].src" >
-                
+                <div *ngIf="m_images[city.name].checked">
+                    {{m_images[city.name].information}}
+                </div>
                 
             </div>
         </form>
-        <div *ngIf="show_2 == true && show">
-                    {{m_information}}
-        </div>
+        
     </div>
 </form>
 
