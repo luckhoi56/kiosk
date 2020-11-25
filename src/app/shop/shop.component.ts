@@ -13,6 +13,7 @@ export class ShopComponent implements OnInit {
   }
 
   changeQuantity(item):void{
+    if(item.quantity < item.available)
     item.quantity++
     console.log(item.quantity)
   }

@@ -1,6 +1,6 @@
 <p>cart works!</p>
 <div *ngFor="let message of messageService.messages.menu">
-    <p >{{ message.name }} {{message.quantity}} ${{message.price}}</p>
+    <p >{{ message.name }} ${{message.price}}  {{message.quantity}} </p>
     <button (click)="changeQuantity(message)">take away</button>
 </div>
 

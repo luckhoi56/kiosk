@@ -10,17 +10,20 @@ export class MessageService {
       {
         "name": "Beef Noodle",
         "quantity":"0",
-        "price":"8"
+        "price":"8",
+        "available":"10"
       },
       {
         "name": "Spring Rolls",
         "quantity":"0",
-        "price":"4"
+        "price":"4",
+        "available":"5"
       },
       {
         "name": "Fried Rice",
         "quantity":"0",
-        "price":"9"
+        "price":"9",
+        "available":"4"
       }
 
     ] }
