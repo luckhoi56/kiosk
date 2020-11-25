@@ -9,38 +9,46 @@ export class TestEventComponent implements OnInit {
   public m_city_from:string = ""
   public m_city_to:any
   public show = false
-  public m_current_city:any=""
+  public m_current_city:any = ""
+  public value:boolean = false
+
   public m_images:any=[
     {
       "name":"Los Angeles",
       "src": "https://images.unsplash.com/photo-1425321395722-b1dd54a97cf3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
-      "information":"this is one"
+      "information":"this is one",
+      "checked":"fase"
       
     },
     {
       "name":"St. Louis",
       "src": "https://images.unsplash.com/photo-1605842581240-a0e2527d200b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      "information":"this is 2"
+      "information":"this is 2",
+      "checked":"fase"
     },
     {
       "name":"Houston",
       "src": "https://images.unsplash.com/photo-1603538794058-7471d7648902?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      "information":"this is 3"
+      "information":"this is 3",
+      "checked":"fase"
     },
     {
       "name":"Seattle",
       "src": "https://images.unsplash.com/photo-1605960502123-1c4f3cfaec08?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      "information":"this is 4"
+      "information":"this is 4",
+      "checked":"fase"
     },
     {
       "name":"New York",
       "src": "https://images.unsplash.com/photo-1605699429575-9f016e477b48?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      "information":"this is 5"
+      "information":"this is 5",
+      "checked":"fase"
     },
     {
       "name":"Tampa",
       "src": "https://images.unsplash.com/photo-1603879493311-a977e9e5aa65?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-      "information":"this is 6"
+      "information":"this is 6",
+      "checked":"fase"
     },
   ]
   public data = JSON.parse(`{
