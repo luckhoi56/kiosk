@@ -12,4 +12,8 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeQuantity(item):void{
+    item.quantity++
+    console.log(item.quantity)
+  }
 }

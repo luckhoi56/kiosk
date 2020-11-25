@@ -1,5 +1,6 @@
 <p>shop works!</p>
-<div>
-    <p *ngFor="let message of messageService.messages.menu">{{ message.name }} {{message.quantity}}</p>
+<div *ngFor="let message of messageService.messages.menu">
+    <p >{{ message.name }} {{message.quantity}}</p>
+    <button (click)="changeQuantity(message)">add</button>
 </div>
 
