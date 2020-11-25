@@ -5,7 +5,23 @@ import { Injectable } from '@angular/core';
 })
 export class MessageService {
 
-  private messages: any ={"Beef Noodle": {"quantity":"0"},"Fried Rice":{"quantity":"0"},"Spring Rolls": {"quantity":"0"}}
+  public messages: any =JSON.parse(`{
+    "menu": [
+      {
+        "name": "Beef Noodle",
+        "quantity":"0"
+      },
+      {
+        "name": "Spring Rolls",
+        "quantity":"0"
+      },
+      {
+        "name": "Fried Rice",
+        "quantity":"0"
+      }
+
+    ] }
+`)
 
 
   constructor() { }
